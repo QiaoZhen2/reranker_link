@@ -33,6 +33,9 @@ class QADocs(BaseModel):
 
 # 获取access_token的函数
 def get_access_token():
+    #补充取得clientid、clientsc代码
+
+    
     # 替换以下API Key和Secret Key为实际的值
     url = "https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id={clientid}&client_secret={clientsc}"
     
