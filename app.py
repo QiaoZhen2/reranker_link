@@ -5,11 +5,11 @@ from typing import List, Optional
 from pydantic import BaseModel
 import requests
 import json
-import uvicorn  # 确保已经安装uvicorn
+import uvicorn
 import os
 
 # 环境变量传入
-sk_key = os.environ.get('sk-key', 'sk-aaabbbcccdddeeefffggghhhiiijjjkkk')
+sk_key = os.environ.get('sk-key', 'skkey')
 
 # 创建一个FastAPI实例
 app = FastAPI()
@@ -34,7 +34,7 @@ class QADocs(BaseModel):
 # 获取access_token的函数
 def get_access_token():
     # 替换以下API Key和Secret Key为实际的值
-    url = "https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id=ROR492iOYD2ZIQ5tejy2mJ4E&client_secret=ezFcsXV6ZfVsQ7YGgCveh2upigDrQ7Bv"
+    url = "https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id={clientid}&client_secret={clientsc}"
     
     payload = json.dumps("")
     headers = {
