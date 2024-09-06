@@ -1,1 +1,6 @@
-
+fastapi
+fastapi.security
+fastapi.middleware.cors
+pydantic
+requests
+uvicorn
